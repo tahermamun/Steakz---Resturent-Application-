@@ -1,12 +1,9 @@
-// Fetch users from local storage
 let users = JSON.parse(localStorage.getItem("users")) || [];
 
-// Function to render the list of users
 function renderUserList() {
   const userTableBody = document.querySelector(".customer-table tbody");
-  userTableBody.innerHTML = ""; // Clear existing rows
+  userTableBody.innerHTML = "";
 
-  // Loop through users and create rows for each
   users.forEach((user, index) => {
     const row = document.createElement("tr");
 
@@ -23,19 +20,14 @@ function renderUserList() {
   });
 }
 
-// Function to delete a user from local storage
 function deleteUser(index) {
-  // Remove user from the array
   users.splice(index, 1);
 
-  // Update local storage
   localStorage.setItem("users", JSON.stringify(users));
 
-  // Re-render the user list
   renderUserList();
 }
 
-// Call renderUserList on page load
 document.addEventListener("DOMContentLoaded", () => {
   let adminLogged = JSON.parse(localStorage.getItem("adminLogged"));
   if (!adminLogged || null) {

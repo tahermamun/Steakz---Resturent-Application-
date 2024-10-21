@@ -53,27 +53,25 @@ function removeFoodItem(button) {
 
 // Function to Calculate Total Price
 function calculateTotal() {
-    const foodSelects = document.querySelectorAll(".foodSelect");
-    const quantities = document.querySelectorAll(".quantity");
-    let totalPrice = 0;
-  
-    foodSelects.forEach((foodSelect, index) => {
-      const foodPrice = parseFloat(
-        foodSelect.selectedOptions[0].getAttribute("data-price")
-      );
-      const quantity = parseInt(quantities[index].value);
-      totalPrice += foodPrice * quantity;
-    });
-  
-    document.getElementById("totalPrice").innerText = totalPrice.toFixed(2); 
-  }
-  
+  const foodSelects = document.querySelectorAll(".foodSelect");
+  const quantities = document.querySelectorAll(".quantity");
+  let totalPrice = 0;
+
+  foodSelects.forEach((foodSelect, index) => {
+    const foodPrice = parseFloat(
+      foodSelect.selectedOptions[0].getAttribute("data-price")
+    );
+    const quantity = parseInt(quantities[index].value);
+    totalPrice += foodPrice * quantity;
+  });
+
+  document.getElementById("totalPrice").innerText = totalPrice.toFixed(2);
+}
 
 // Function to Place Order
 function placeOrder(event) {
   event.preventDefault();
 
-  // Gather order details
   const customerName = currentUser.customerName;
   const customerUsername = currentUser.username;
   const phoneNumber = document.getElementById("phoneNumber").value;
@@ -81,13 +79,12 @@ function placeOrder(event) {
   const quantities = document.querySelectorAll(".quantity");
 
   const orderedItems = Array.from(foodSelects).map((foodSelect, index) => ({
-    food: foodSelect.value, 
-    quantity: quantities[index].value, 
+    food: foodSelect.value,
+    quantity: quantities[index].value,
   }));
 
   const total = document.getElementById("totalPrice").innerText;
 
-  // Create new order object
   const newOrder = {
     customerName,
     customerUsername,
@@ -104,10 +101,8 @@ function placeOrder(event) {
   window.location.href = "previous-orders.html";
 }
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
   populateUserData();
 
-  calculateTotal(); // Initialize total calculation
+  calculateTotal();
 });

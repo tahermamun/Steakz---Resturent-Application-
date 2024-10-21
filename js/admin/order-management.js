@@ -59,13 +59,11 @@ function deleteOrder(orderIndex) {
   orders.splice(orderIndex, 1);
   localStorage.setItem("orders", JSON.stringify(orders));
 
-  document.getElementById("adminOrdersTable").innerHTML = ""; // Clear the table
+  document.getElementById("adminOrdersTable").innerHTML = ""; 
   displayAllOrders();
 }
 
-// Call the function when the page loads
 document.addEventListener("DOMContentLoaded", () => {
-  // check if admin is authenticated or not
   let adminLogged = JSON.parse(localStorage.getItem("adminLogged"));
   if (!adminLogged || null) {
     alert("Please Login to Admin Panel");

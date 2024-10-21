@@ -17,9 +17,7 @@ const totalSalesAmount = orders.reduce(
   0
 );
 
-// Call renderUserList on page load
 document.addEventListener("DOMContentLoaded", (event) => {
-  // check if admin is authenticated or not
   let adminLogged = JSON.parse(localStorage.getItem("adminLogged"));
   if (!adminLogged || null) {
     alert("Please Login to Admin Panel");
