@@ -1,5 +1,27 @@
 // Simulated Local Storage Data
 let users = JSON.parse(localStorage.getItem("users")) || [];
 let orders = JSON.parse(localStorage.getItem("orders")) || [];
-let currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
+let employees = JSON.parse(localStorage.getItem("employees")) || null;
 
+const customer = document.getElementById("totalCustomers");
+const employee = document.getElementById("totalEmployees");
+const totalOrders = document.getElementById("totalOrders");
+const completeOrders = document.getElementById("completedOrders");
+const totalSales = document.getElementById("totalSales");
+
+const totalCompleteOrder = orders.filter(
+  (order) => order.status === "Completed"
+).length;
+const totalSalesAmount = orders.reduce(
+  (sum, order) => sum + parseFloat(order.total),
+  0
+);
+
+// Call renderUserList on page load
+document.addEventListener("DOMContentLoaded", () => {
+  customer.innerHTML = users.length;
+  employee.innerHTML = employees.length;
+  totalOrders.innerHTML = orders.length;
+  completeOrders.innerHTML = totalCompleteOrder;
+  totalSales.innerHTML = "$" + totalSalesAmount;
+});
