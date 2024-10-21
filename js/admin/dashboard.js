@@ -18,7 +18,14 @@ const totalSalesAmount = orders.reduce(
 );
 
 // Call renderUserList on page load
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", (event) => {
+  // check if admin is authenticated or not
+  let adminLogged = JSON.parse(localStorage.getItem("adminLogged"));
+  if (!adminLogged || null) {
+    alert("Please Login to Admin Panel");
+    window.location.href = "admin-login.html";
+  }
+
   customer.innerHTML = users.length;
   employee.innerHTML = employees.length;
   totalOrders.innerHTML = orders.length;

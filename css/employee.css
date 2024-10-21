@@ -17,11 +17,8 @@
 }
 
 /* Employee Form Styles */
-.employee-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
+#addEmployeeForm label{
+margin-bottom: 50px;
 }
 
 .employee-form label {
@@ -107,6 +104,6 @@
 }
 .employee-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-gap: 10px;
 }

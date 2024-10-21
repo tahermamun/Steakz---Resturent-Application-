@@ -38,13 +38,21 @@
                 <!-- Single food item template -->
                 <div class="food-item">
                     <label for="food">Select Food:</label>
-                    <select onchange="calculateTotal()" class="input-style" style="width: 40%;">
-                        <option value="Pizza" data-price="10">Pizza - $10</option>
-                        <option value="Burger" data-price="8">Burger - $8</option>
-                        <option value="Pasta" data-price="12">Pasta - $12</option>
+                    <select class="foodSelect input-style" onchange="calculateTotal()" style="width: 40%;">
+                        <option value="Grilled Chicken" data-price="12.99">Grilled Chicken - $12.99</option>
+                        <option value="Pasta Alfredo" data-price="9.99">Pasta Alfredo - $9.99</option>
+                        <option value="Pizza Margherita" data-price="14.99">Pizza Margherita - $14.99</option>
+                        <option value="Sushi Roll" data-price="8.99">Sushi Roll - $8.99</option>
+                        <option value="Burger Deluxe" data-price="11.99">Burger Deluxe - $11.99</option>
+                        <option value="Caesar Salad" data-price="7.99">Caesar Salad - $7.99</option>
                     </select>
+
+
+
                     <label for="quantity">Quantity:</label>
-                    <input class="input-style" style="width: 10%;" type="number" class="quantity" min="1" value="1"
+
+
+                    <input type="number" class="quantity input-style" style="width: 10%;" min="1" value="1"
                         onchange="calculateTotal()" required>
                     <button type="button" onclick="removeFoodItem(this)">Remove</button>
                 </div>
@@ -58,7 +66,7 @@
         </form>
     </section>
 
-    <script src="js/script.js"></script>
+    <script src="js/client/ordres.js"></script>
 </body>
 
 </html>
