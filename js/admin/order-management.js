@@ -17,7 +17,7 @@ function displayAllOrders() {
     const row = `
             <tr>
                 <td>${index + 1}</td>
-                <td>${order.customerName}</td>
+                <td>${order.customerUsername}</td>
                 <td>${items}</td>
                 
                 <td>$${order.total}</td>

@@ -4,7 +4,7 @@ let employees = JSON.parse(localStorage.getItem("employees")) || [];
 // Function to render employee list
 function renderEmployeeList() {
   const employeeList = document.getElementById("employeeList");
-  employeeList.innerHTML = ""; 
+  employeeList.innerHTML = "";
 
   employees.forEach((employee, index) => {
     const listItem = document.createElement("li");
@@ -58,3 +58,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   renderEmployeeList();
 });
+
