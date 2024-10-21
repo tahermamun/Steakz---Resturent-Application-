@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steakz - Register</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login_register.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Steakz</h1>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a class="active" href="register.html">Register</a>
+            <a href="order.html">Order</a>
+            <a href="previous-orders.html">Previous Orders</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </nav>
+
+    <section class="register-section">
+        <h2>Register</h2>
+
+        <form id="registerForm" onsubmit="register(event)">
+            <label for="fullName">Full Name:</label>
+            <input class="input-style" type="text" id="fullName" required>
+
+            <label for="newUsername">Username:</label>
+            <input class="input-style" type="text" id="username" required>
+
+            <label for="newPassword">Password:</label>
+            <input class="input-style" type="password" id="password" required>
+
+            <label for="phone">Phone:</label>
+            <input class="input-style" type="tel" id="phone" required>
+
+            <label for="address">Address:</label>
+            <input class="input-style" type="text" id="address" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

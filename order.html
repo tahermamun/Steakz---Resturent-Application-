@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steakz - Order</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Steakz</h1>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a class="active" href="order.html">Order</a>
+            <a href="previous-orders.html">Previous Orders</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </nav>
+
+    <section class="order-section">
+        <h2>Orders</h2>
+
+        <form id="orderForm" onsubmit="placeOrder(event)">
+            <label for="customerName">Customer Name:</label>
+            <input class="input-style" type="text" id="customerName" readonly>
+            <label for="customerName">Customer Username:</label>
+            <input class="input-style" type="text" id="customer_username" readonly>
+            <label for="phoneNumber">Phone Number:</label>
+            <input class="input-style" type="text" id="phoneNumber" required>
+
+            <!-- Food selection section -->
+            <div id="foodList">
+                <!-- Single food item template -->
+                <div class="food-item">
+                    <label for="food">Select Food:</label>
+                    <select onchange="calculateTotal()" class="input-style" style="width: 40%;">
+                        <option value="Pizza" data-price="10">Pizza - $10</option>
+                        <option value="Burger" data-price="8">Burger - $8</option>
+                        <option value="Pasta" data-price="12">Pasta - $12</option>
+                    </select>
+                    <label for="quantity">Quantity:</label>
+                    <input class="input-style" style="width: 10%;" type="number" class="quantity" min="1" value="1"
+                        onchange="calculateTotal()" required>
+                    <button type="button" onclick="removeFoodItem(this)">Remove</button>
+                </div>
+            </div>
+
+            <!-- Button to add more food items -->
+            <button type="button" onclick="addFoodItem()">Add Another Food</button>
+            <hr>
+            <h3>Total Price: $<span id="totalPrice">0</span></h3>
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

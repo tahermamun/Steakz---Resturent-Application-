@@ -1,0 +1,112 @@
+/* Container for Employee Management */
+.employee-management-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.employee-management-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Employee Form Styles */
+.employee-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.employee-form label {
+  font-weight: bold;
+  color: #262626;
+  font-size: 1.1rem;
+}
+
+.employee-form input,
+.employee-form select {
+  width: calc(50% - 10px);
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.employee-form input.full-width,
+.employee-form select.full-width {
+  width: 100%;
+}
+
+.employee-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.employee-form button:hover {
+  background-color: #218838;
+}
+
+
+.employee-list,
+.employee-form h3 {
+  font-size: 1.5rem;
+  margin: 15px;
+  color: #4caf50;
+}
+
+.employee-item {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.employee-item:hover {
+  background-color: #eaeaea;
+}
+
+.employee-item span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.employee-item button {
+  background-color: #ff4d4d;
+  border: none;
+  padding: 8px 15px;
+  width: 150px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.employee-item button:hover {
+  background-color: #ff1a1a;
+}
+.employee-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steakz - Employees</title>
+
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+    <link rel="stylesheet" href="../css/employee.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Steakz - Admin</h1>
+        <nav>
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a class="active" href="employees.html">Manage Employees</a>
+            <a href="all-customer.html">Manage Customer</a>
+            <a href="order-management.html">Manage Orders</a>
+            <a href="#" class="logout" onclick="logoutAdmin()">Logout</a>
+        </nav>
+    </header>
+
+    <section class="dashboard">
+        <h2>Employee Management</h2>
+        <hr>
+
+        <div class="employee-section">
+
+            <!-- Form to Add Employee -->
+            <div class="employee-form">
+                <h3>Add Employee</h3>
+                <form id="addEmployeeForm">
+                    <label for="employeeName">Employee Name:</label>
+                    <input type="text" id="employeeName" class="full-width" placeholder="Enter employee name" required>
+
+                    <label for="employeeId">Employee ID:</label>
+                    <input type="text" id="employeeId" class="full-width" placeholder="Enter employee ID" required>
+
+                    <button type="submit">Add Employee</button>
+                </form>
+            </div>
+
+            <!-- Employee List -->
+            <div class="employee-list">
+                <h3>Current Employees</h3>
+                <ul id="employeeList"></ul>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

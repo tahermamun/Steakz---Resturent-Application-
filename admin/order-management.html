@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steakz - Order Management</title>
+
+    <link rel="stylesheet" href="../css/order-management.css">
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Steakz - Admin</h1>
+        <nav>
+            <a href="admin-dashboard.html">Dashboard</a>
+
+            <a href="employees.html">Manage Employees</a>
+            <a href="all-customer.html">Manage Customer</a>
+            <a class="active" href="order-management.html">Manage Orders</a>
+            <a href="#" class="logout" onclick="logoutAdmin()">Logout</a>
+        </nav>
+    </header>
+
+    <section class="dashboard">
+        <h2>All Orders</h2>
+
+        <hr>
+
+
+        <section class="order-section orders-container">
+
+            <!-- Table to Display Orders -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer Name</th>
+                        <th>Food Items</th>
+                        <th>Total Price</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="adminOrdersTable">
+                    <!-- Orders will be dynamically loaded here -->
+                </tbody>
+            </table>
+        </section>
+
+
+    </section>
+
+    <script src="../js/order-management.js"></script>
+
+</body>
+
+</html>

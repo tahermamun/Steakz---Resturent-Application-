@@ -1,0 +1,26 @@
+
+
+/* Label styling */
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+  }
+
+  .input-field {
+    padding: 10px;
+  }
+
+  .submit-btn {
+    padding: 10px;
+  }
+}

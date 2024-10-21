@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steakz - All Customers</title>
+    <link rel="stylesheet" href="../css/all-customer.css">
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+</head>
+
+<body>
+    <header>
+        <a class="admin-logo" href="admin-dashboard.html">Steakz - Admin</a>
+
+        <nav>
+            <a href="admin-dashboard.html">Dashboard</a>
+
+            <a href="employees.html">Manage Employees</a>
+            <a class="active" href="all-customer.html">Manage Customer</a>
+            <a href="order-management.html">Manage Orders</a>
+            <a href="#" class="logout" onclick="logoutAdmin()">Logout</a>
+        </nav>
+    </header>
+
+    <section class="dashboard">
+        <h2>Customer Management</h2>
+    
+        <hr>
+        <div class="customer-table-container">
+            <table class="customer-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    <!-- Customers will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <script src="../js/all-users.js"></script>
+</body>
+
+</html>
